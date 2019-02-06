@@ -1,113 +1,116 @@
-#ICO_DIRTY="*"
-#ICO_DIRTY="↯"
-ICO_DIRTY="⚡"
+export __GIT_PROMPT_DIR="~/Repos/zsh-git-prompt"
+export GIT_PROMPT_EXECUTABLE="haskell"
 
-ICO_AHEAD="↑"
-#ICO_AHEAD=""
-#ICO_AHEAD="▲"
-
-ICO_BEHIND="↓"
-#ICO_BEHIND=""
-#ICO_BEHIND="▼"
-
-ICO_DIVERGED="↕"
-#ICO_DIVERGED=""
-#ICO_DIVERGED="נּ"
-
-
-COLOR_ROOT="%F{red}"
-COLOR_USER="%F{cyan}"
-COLOR_NORMAL="%F{white}"
-PROMPT_STYLE="classic"
-
-
-#█▓▒░ allow functions in the prompt
-setopt PROMPT_SUBST
 autoload -Uz colors && colors
 
-#█▓▒░ colors for permissions
-if [[ "$EUID" -ne "0" ]]
-then  # if user is not root
-	USER_LEVEL="${COLOR_USER}"
-else # root!
-	USER_LEVEL="${COLOR_ROOT}"
-fi
+autoload -Uz add-zsh-hook
 
-#█▓▒░ git prompt
-GIT_PROMPT() {
-  test=$(git rev-parse --is-inside-work-tree 2> /dev/null)
-  if [ ! "$test" ]
-  then
-    case "$PROMPT_STYLE" in
-      ascii)
-        echo "$reset_color%F{cyan}▒░"
-      ;;
-      arrows)
-        echo "$reset_color%F{cyan}"
-      ;;
+add-zsh-hook chpwd chpwd_update_git_vars
+add-zsh-hook preexec preexec_update_git_vars
+add-zsh-hook precmd precmd_update_git_vars
+
+# preexec_update_git_vars {{{
+function preexec_update_git_vars() {
+    case "$2" in
+        git*|hub*|gh*|stg*)
+        __EXECUTED_GIT_COMMAND=1
+        ;;
     esac
-    return
-  fi
-  ref=$(git name-rev --name-only HEAD | sed 's!remotes/!!;s!undefined!merging!' 2> /dev/null)
-  dirty="" && [[ $(git diff --shortstat 2> /dev/null | tail -n1) != "" ]] && dirty=$ICO_DIRTY
-  stat=$(git status | sed -n 2p)
-  case "$stat" in
-    *ahead*)
-      stat=$ICO_AHEAD
-    ;;
-    *behind*)
-      stat=$ICO_BEHIND
-    ;;
-    *diverged*)
-      stat=$ICO_DIVERGED
-    ;;
-    *)
-      stat=""
-    ;;
-  esac
-  case "$PROMPT_STYLE" in
-    ninja)
-      echo "${COLOR_NORMAL}${ref}${dirty}${stat}"
-    ;;
-    ascii)
-      echo "%{$bg[magenta]%}%F{cyan}▓▒░ %F{black}${ref}${dirty}${stat} $reset_color%F{magenta}▒░"
-    ;;
-    arrows)
-      echo "%{$bg[magenta]%}%F{cyan} %F{black}${ref}${dirty}${stat} $reset_color%F{magenta}"
-    ;;
-    *)
-    echo "${USER_LEVEL}━[${COLOR_NORMAL}"${ref}${dirty}${stat}"${USER_LEVEL}]"
-    ;;
-  esac
 }
-case "$PROMPT_STYLE" in
-#█▓▒░ ascii
-ascii)
-PROMPT='%{$bg[cyan]%} %F{black}%~ $(GIT_PROMPT)$reset_color
-%f'
-;;
-#█▓▒░ arrows
-arrows)
-PROMPT='%{$bg[cyan]%}%F{black} %~ $(GIT_PROMPT)$reset_color
-%f'
-;;
-#█▓▒░ ninja
-ninja)
-PROMPT='%F{white}
-        ▟▙  ${USER_LEVEL}%~   %F{white}$(GIT_PROMPT) %F{white}
-▟▒${USER_LEVEL}░░░░░░░%F{white}▜▙▜████████████████████████████████▛
-▜▒${USER_LEVEL}░░░░░░░%F{white}▟▛▟▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▛
-        ▜▛
-            %f'
-;;
-#█▓▒░ dual line
-dual)
-PROMPT='${USER_LEVEL}┏[${COLOR_NORMAL}%~${USER_LEVEL}]$(GIT_PROMPT)
-${USER_LEVEL}┗━ ━ %f'
-;;
-#█▓▒░ classic
-*)
-PROMPT='${USER_LEVEL}[${COLOR_NORMAL}%~${USER_LEVEL}]$(GIT_PROMPT)━━ ━ %f'
-;;
-esac
+# }}}
 
+# precmd_update_git_vars {{{
+function precmd_update_git_vars() {
+    if [ -n "$__EXECUTED_GIT_COMMAND" ] || [ ! -n "$ZSH_THEME_GIT_PROMPT_CACHE" ]; then
+        update_current_git_vars
+        unset __EXECUTED_GIT_COMMAND
+    fi
+}
+# }}}
+
+# chpwd_update_git_vars {{{
+function chpwd_update_git_vars() {
+    update_current_git_vars
+}
+# }}}
+
+# update_current_git_vars {{{
+function update_current_git_vars() {
+    unset __CURRENT_GIT_STATUS
+
+    _GIT_STATUS=`git status --porcelain --branch &> /dev/null | gitstatus`
+    __CURRENT_GIT_STATUS=("${(@s: :)_GIT_STATUS}")
+
+    GIT_BRANCH=$__CURRENT_GIT_STATUS[1]
+    GIT_AHEAD=$__CURRENT_GIT_STATUS[2]
+    GIT_BEHIND=$__CURRENT_GIT_STATUS[3]
+    GIT_STAGED=$__CURRENT_GIT_STATUS[4]
+    GIT_CONFLICTS=$__CURRENT_GIT_STATUS[5]
+    GIT_CHANGED=$__CURRENT_GIT_STATUS[6]
+    GIT_UNTRACKED=$__CURRENT_GIT_STATUS[7]
+}
+# }}}
+
+# git_super_status {{{
+git_super_status() {
+    precmd_update_git_vars
+
+    if [ -n "$__CURRENT_GIT_STATUS" ]; then
+        STATUS="$ZSH_THEME_GIT_PROMPT_PREFIX$GIT_BRANCH"
+
+        if [ "$GIT_BEHIND" -ne "0" ]; then
+            STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_BEHIND$GIT_BEHIND"
+        fi
+
+        if [ "$GIT_AHEAD" -ne "0" ]; then
+            STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_AHEAD$GIT_AHEAD"
+        fi
+
+        STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_SEPARATOR"
+
+        if [ "$GIT_STAGED" -ne "0" ]; then
+            STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_STAGED$GIT_STAGED"
+        fi
+
+        if [ "$GIT_CONFLICTS" -ne "0" ]; then
+            STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_CONFLICTS$GIT_CONFLICTS"
+        fi
+
+        if [ "$GIT_CHANGED" -ne "0" ]; then
+            STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_CHANGED$GIT_CHANGED"
+        fi
+
+        if [ "$GIT_UNTRACKED" -ne "0" ]; then
+            STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_UNTRACKED"
+        fi
+
+        if [ "$GIT_CHANGED" -eq "0" ] && [ "$GIT_CONFLICTS" -eq "0" ] && [ "$GIT_STAGED" -eq "0" ] && [ "$GIT_UNTRACKED" -eq "0" ]; then
+            STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_CLEAN"
+        fi
+
+        STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_SUFFIX"
+
+        echo "${GIT_COLOR}$STATUS${RESET_COLOR}"
+    fi
+}
+# }}}
+
+ZSH_THEME_GIT_PROMPT_PREFIX="["
+ZSH_THEME_GIT_PROMPT_SUFFIX="]"
+ZSH_THEME_GIT_PROMPT_SEPARATOR="|"
+ZSH_THEME_GIT_PROMPT_STAGED="%{⋄%G%}"
+ZSH_THEME_GIT_PROMPT_CONFLICTS="%{✖%G%}"
+ZSH_THEME_GIT_PROMPT_CHANGED="%{✚%G%}"
+ZSH_THEME_GIT_PROMPT_BEHIND="%{↓%G%}"
+ZSH_THEME_GIT_PROMPT_AHEAD="%{↑%G%}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{…%G%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{✔%G%}"
+
+USER_COLOR="%{$fg[blue]%}"
+HOST_COLOR="%{$fg[blue]%}"
+PWD_COLOR="%{$fg[red]%}"
+GIT_COLOR="%{$fg[green]%}"
+RESET_COLOR="%{$reset_color%}"
+
+#PROMPT="%{%F{blue}%}%n@%m %{%F{red}%}%~%{%F{reset}%} $(git_super_status)%{%F{reset}%}$ "
+PROMPT="${USER_COLOR}%n@%m${RESET_COLOR}${PWD_COLOR}[%3~]${RESET_COLOR}$(git_super_status) ${USER_COLOR}%(w.✝.λ)${RESET_COLOR} "

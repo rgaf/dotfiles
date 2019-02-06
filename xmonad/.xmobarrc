@@ -1,0 +1,18 @@
+Config { font = "xft:Bitstream Vera Sans Mono:size=14:antialias=true"
+       , borderColor = "black"
+       , border = TopB
+       , bgColor = "#000000"
+       , fgColor = "#999999"
+       , position = Static { xpos = 0, ypos = 0, width = 2310, height = 25 }
+       --, position = TopW L 100
+       , commands =
+           [ Run Cpu ["-t", "<total>%", "-L","5","-H","40","--normal","green","--high","red"] 15
+           , Run BatteryP ["BAT0"] ["-t", "<acstatus> <left>% <timeleft>", "-h", "green", "-n", "yellow", "-l", "red"] 30
+           , Run Memory ["-t", "<usedratio>%"] 30
+           , Run Date "%F (%a) %I:%M %p" "date" 30
+           , Run StdinReader
+           ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ BAT: %battery% | CPU: %cpu% | MEM: %memory% | DATE: %date% "
+       }

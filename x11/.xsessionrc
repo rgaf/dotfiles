@@ -1,0 +1,15 @@
+#!/bin/bash
+
+xrdb -merge ~/.Xresources
+xmodmap ~/.Xmodmap
+stalonetray &
+xscreensaver -no-splash &
+xfce4-power-manager &
+
+feh --bg-scale /usr/share/backgrounds/On_top_of_the_Rubihorn_by_Matthias_Niess.jpg &
+
+if [ -x /usr/bin/nm-applet ] ; then
+    nm-applet --sm-disable &
+fi
+
+exec xmonad

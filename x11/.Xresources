@@ -1,0 +1,4 @@
+URxvt.font: xft:Bitstream Vera Sans Mono:autohint=true:pixelsize=16
+URxvt*foreground: white
+URxvt*background: black
+URxvt*scrollBar: False

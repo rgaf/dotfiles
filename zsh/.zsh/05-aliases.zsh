@@ -7,6 +7,7 @@ alias home="cd ~"
 
 alias mkdir="mkdir -p"
 
+alias df="cd ~/dotfiles"
 alias p="cd ~/Projects"
 alias g="git"
 
