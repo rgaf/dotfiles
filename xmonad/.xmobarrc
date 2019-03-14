@@ -1,9 +1,7 @@
-Config { font = "xft:Bitstream Vera Sans Mono:size=14:antialias=true"
-       , borderColor = "black"
-       , border = TopB
+Config { font = "xft:Fira Mono:size=14,style=medium:antialias=true"
        , bgColor = "#000000"
-       , fgColor = "#999999"
-       , position = Static { xpos = 0, ypos = 0, width = 2310, height = 25 }
+       , fgColor = "#bbbbbb"
+       , position = Static { xpos = 0, ypos = 0, width = 2360, height = 25 }
        --, position = TopW L 100
        , commands =
            [ Run Cpu ["-t", "<total>%", "-L","5","-H","40","--normal","green","--high","red"] 15
@@ -14,5 +12,6 @@ Config { font = "xft:Bitstream Vera Sans Mono:size=14:antialias=true"
            ]
        , sepChar = "%"
        , alignSep = "}{"
+       , lowerOnStart = False
        , template = "%StdinReader% }{ BAT: %battery% | CPU: %cpu% | MEM: %memory% | DATE: %date% "
        }

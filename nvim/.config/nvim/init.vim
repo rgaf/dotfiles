@@ -2,27 +2,23 @@
 set nocompatible
 filetype off
 
-set runtimepath+=~/.vim/
+call plug#begin('~/.local/share/nvim/plugged')
 
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent call system('mkdir -p ~/.vim/{autoload,bundle,cache,undo,backups,swaps}')
-  silent call system('curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim')
-  execute 'source ~/.vim/autoload/plug.vim'
-  augroup plugsetup
-    au!
-    autocmd VimEnter * PlugInstall
-  augroup end
-endif
-
-call plug#begin('~/.vim/plugged')
-
+Plug 'airblade/vim-gitgutter'
 Plug 'cespare/vim-toml'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'flazz/vim-colorschemes'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'lilydjwg/colorizer'
+Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
 Plug 'neovimhaskell/haskell-vim'
+Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'srcery-colors/srcery-vim'
 Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -39,33 +35,18 @@ set infercase
 
 " Automatically remove trailing whitespace on buffer write
 autocmd BufWritePre * %s/\s\+$//e
-
-" Navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 " }}}
 
 " UI {{{
-set shortmess+=I " No startup message
+let g:gruvbox_contrast_dark='hard'
+"let g:airline_theme='gruvbox'
+let g:airline_theme='jellybeans'
 
-if has("gui_running")
-  set guioptions-=L
-  set guioptions-=r
-  set guioptions-=m
-  set guioptions-=T
-
-  set guifont=Fira\ Mono\ 14
-else
-  set guifont=Fira\ Mono:h14
-endif
-
-colorscheme jellybeans
 set background=dark
+set termguicolors
+colorscheme jellybeans
 
-set showmatch " Show matching parentheses/brackets
-
+set nohlsearch " No highlighting when searching
 set number " Show line numbers
 set nowrap " No line wrapping
 set cursorline " Highlight cursor
@@ -99,6 +80,7 @@ set foldmethod=marker
 " }}}
 
 " Commands {{{
+" Functions {{{
 function! Comment()
   let ext = tolower(expand('%:e'))
 
@@ -139,10 +121,17 @@ function! NumberToggle()
     set relativenumber
   end
 endfunction
+" }}} Functions
 
 let mapleader="\<Space>"
 
 map <Tab> :NERDTreeToggle<CR>
+
+" Navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 nnoremap ; :
 nnoremap Q @Q
@@ -150,6 +139,11 @@ nnoremap Q @Q
 nnoremap <Leader>r :call NumberToggle()<CR>
 nnoremap <Leader>cc :call Comment()<CR>
 nnoremap <Leader>cu :call Uncomment()<CR>
+
+nnoremap <A-t> :tabnew<CR>
+nnoremap <A-w> :tabclose<CR>
+nnoremap <A-l> :tabnext<CR>
+nnoremap <A-h> :tabprevious<CR>
 
 " Remove trailing whitespace
 command Nows :%s/\s\+$//
@@ -159,6 +153,9 @@ command Nobl :g/^\s*$/d
 
 " Make current buffer executable
 command Chmodx :!chmod a+x %
+
+" Get color under cursor
+command Color :echo synIDattr(synIDtrans(synID(line("."), col("."), 1)), "fg")
 " }}}
 
 " Plugin Settings {{{

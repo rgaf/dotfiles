@@ -6,7 +6,7 @@ stalonetray &
 xscreensaver -no-splash &
 xfce4-power-manager &
 
-feh --bg-scale /usr/share/backgrounds/On_top_of_the_Rubihorn_by_Matthias_Niess.jpg &
+feh --bg-scale /home/rgaf/Pictures/backgrounds/amanita.jpg &
 
 if [ -x /usr/bin/nm-applet ] ; then
     nm-applet --sm-disable &

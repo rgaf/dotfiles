@@ -1,9 +1,9 @@
-export __GIT_PROMPT_DIR="~/Repos/zsh-git-prompt"
+export __GIT_PROMPT_DIR="~/repos/zsh-git-prompt"
 export GIT_PROMPT_EXECUTABLE="haskell"
 
-autoload -Uz colors && colors
+setopt PROMPT_SUBST
 
-autoload -Uz add-zsh-hook
+autoload -U add-zsh-hook
 
 add-zsh-hook chpwd chpwd_update_git_vars
 add-zsh-hook preexec preexec_update_git_vars
@@ -56,17 +56,8 @@ git_super_status() {
     precmd_update_git_vars
 
     if [ -n "$__CURRENT_GIT_STATUS" ]; then
-        STATUS="$ZSH_THEME_GIT_PROMPT_PREFIX$GIT_BRANCH"
-
-        if [ "$GIT_BEHIND" -ne "0" ]; then
-            STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_BEHIND$GIT_BEHIND"
-        fi
-
-        if [ "$GIT_AHEAD" -ne "0" ]; then
-            STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_AHEAD$GIT_AHEAD"
-        fi
-
-        STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_SEPARATOR"
+        STATUS="$ZSH_THEME_GIT_PROMPT_PREFIX$GIT_BRANCH${RESET_COLOR}${GIT_INNER_COLOR}$ZSH_THEME_GIT_PROMPT_SEPARATOR"
+        STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_BEHIND$GIT_BEHIND$ZSH_THEME_GIT_PROMPT_AHEAD$GIT_AHEAD$ZSH_THEME_GIT_PROMPT_SEPARATOR"
 
         if [ "$GIT_STAGED" -ne "0" ]; then
             STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_STAGED$GIT_STAGED"
@@ -88,7 +79,7 @@ git_super_status() {
             STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_CLEAN"
         fi
 
-        STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_SUFFIX"
+        STATUS="$STATUS${RESET_COLOR}${GIT_COLOR}$ZSH_THEME_GIT_PROMPT_SUFFIX"
 
         echo "${GIT_COLOR}$STATUS${RESET_COLOR}"
     fi
@@ -110,7 +101,9 @@ USER_COLOR="%{$fg[blue]%}"
 HOST_COLOR="%{$fg[blue]%}"
 PWD_COLOR="%{$fg[red]%}"
 GIT_COLOR="%{$fg[green]%}"
+GIT_INNER_COLOR="%{$fg[green]%}"
 RESET_COLOR="%{$reset_color%}"
 
 #PROMPT="%{%F{blue}%}%n@%m %{%F{red}%}%~%{%F{reset}%} $(git_super_status)%{%F{reset}%}$ "
-PROMPT="${USER_COLOR}%n@%m${RESET_COLOR}${PWD_COLOR}[%3~]${RESET_COLOR}$(git_super_status) ${USER_COLOR}%(w.✝.λ)${RESET_COLOR} "
+PROMPT='${USER_COLOR}[%n@%m]${RESET_COLOR}${PWD_COLOR}[%~]${RESET_COLOR}$(git_super_status)
+${USER_COLOR}%(w.✝.λ)${RESET_COLOR} '
