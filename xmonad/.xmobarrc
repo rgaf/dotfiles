@@ -4,7 +4,7 @@ Config { font = "xft:Fira Mono:size=14,style=medium:antialias=true"
        , position = Static { xpos = 0, ypos = 0, width = 2360, height = 25 }
        --, position = TopW L 100
        , commands =
-           [ Run Cpu ["-t", "<total>%", "-L","5","-H","40","--normal","green","--high","red"] 15
+           [ Run Cpu ["-t", "<total>%", "-L", "5", "-H", "40", "--normal", "green", "--high", "red"] 15
            , Run BatteryP ["BAT0"] ["-t", "<acstatus> <left>% <timeleft>", "-h", "green", "-n", "yellow", "-l", "red"] 30
            , Run Memory ["-t", "<usedratio>%"] 30
            , Run Date "%F (%a) %I:%M %p" "date" 30

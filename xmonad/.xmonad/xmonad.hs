@@ -58,7 +58,7 @@ myWorkspaces =
     , "7:mail", "8:psql", "9:chat"
     ]
 
-myLayouts = tall ||| Mirror (tall) ||| Grid ||| full
+myLayouts = tall ||| Mirror (tall) ||| Grid ||| Mirror Grid ||| full
     where
       tall = ResizableTall 1 (3 / 100) (3 / 4) []
       full = noBorders (fullscreenFull Full)

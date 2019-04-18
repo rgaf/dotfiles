@@ -1,0 +1,845 @@
+# Basic Unicode {{{
+# Consonants {{{
+
+#################################################################################
+#
+# PoA Prefixes:
+#   Bilabial          p
+#   Labiodental       f
+#   Dental/Alveolar   t
+#   Postalveolar      S
+#   Retroflex         r
+#   Alveopalatal      c
+#   Palatal           j
+#   Velar             g
+#   Uvular            q
+#   Pharyngeal        Q
+#   Epiglottal        H
+#   Glottal           h
+#
+# MoA Suffixes:
+#   Nasal             n
+#   Plosive [-vcd]    t
+#   Plosive [+vcd]    d
+#   Affricate [-vcd]  c
+#   Affricate [+vcd]  x
+#   Fricative [-vcd]  s
+#   Fricative [+vcd]  z
+#   Approximant       w
+#   Tap/flap          r
+#   Trill             R
+#
+##
+
+<Multi_key> <backslash> <p> <s> : "ɸ"
+<Multi_key> <backslash> <p> <z> : "β"
+<Multi_key> <backslash> <p> <R> : "ʙ"
+
+<Multi_key> <backslash> <f> <n> : "ɱ"
+<Multi_key> <backslash> <f> <w> : "ʋ"
+
+<Multi_key> <backslash> <t> <c> : "ʦ"
+<Multi_key> <backslash> <t> <x> : "ʣ"
+<Multi_key> <backslash> <t> <s> : "θ"
+<Multi_key> <backslash> <t> <z> : "ð"
+<Multi_key> <backslash> <t> <w> : "ɹ"
+<Multi_key> <backslash> <t> <r> : "ɾ"
+
+<Multi_key> <backslash> <S> <c> : "ʧ"
+<Multi_key> <backslash> <S> <x> : "ʤ"
+<Multi_key> <backslash> <S> <s> : "ʃ"
+<Multi_key> <backslash> <S> <z> : "ʒ"
+
+<Multi_key> <backslash> <r> <n> : "ɳ"
+<Multi_key> <backslash> <r> <t> : "ʈ"
+<Multi_key> <backslash> <r> <d> : "ɖ"
+<Multi_key> <backslash> <r> <w> : "ɻ"
+<Multi_key> <backslash> <r> <r> : "ɽ"
+
+<Multi_key> <backslash> <c> <n> : "ȵ"
+<Multi_key> <backslash> <c> <t> : "ȶ"
+<Multi_key> <backslash> <c> <d> : "ȡ"
+<Multi_key> <backslash> <c> <c> : "ʨ"
+<Multi_key> <backslash> <c> <x> : "ʥ"
+<Multi_key> <backslash> <c> <s> : "ɕ"
+<Multi_key> <backslash> <c> <z> : "ʑ"
+<Multi_key> <backslash> <c> <l> : "ȴ"
+
+<Multi_key> <backslash> <j> <n> : "ɲ"
+<Multi_key> <backslash> <j> <d> : "ɟ"
+<Multi_key> <backslash> <j> <s> : "ç"
+<Multi_key> <backslash> <j> <z> : "ʝ"
+
+<Multi_key> <backslash> <g> <n> : "ŋ"
+<Multi_key> <backslash> <g> <d> : "ɡ"
+<Multi_key> <backslash> <g> <z> : "ɣ"
+<Multi_key> <backslash> <g> <w> : "ɰ"
+
+<Multi_key> <backslash> <q> <n> : "ɴ"
+<Multi_key> <backslash> <q> <d> : "ɢ"
+<Multi_key> <backslash> <q> <s> : "χ"
+<Multi_key> <backslash> <q> <z> : "ʁ"
+<Multi_key> <backslash> <q> <R> : "ʀ"
+
+<Multi_key> <backslash> <Q> <s> : "ħ"
+<Multi_key> <backslash> <Q> <z> : "ʕ"
+
+<Multi_key> <backslash> <H> <t> : "ʡ"
+<Multi_key> <backslash> <H> <s> : "ʜ"
+<Multi_key> <backslash> <H> <z> : "ʢ"
+
+<Multi_key> <backslash> <h> <t> : "ʔ"
+<Multi_key> <backslash> <h> <z> : "ɦ"
+# }}}
+
+# Vowels {{{
+
+#################################################################################
+#
+# Backness/Roundness Prefixes:
+#   Front [-rnd]      i
+#   Front [+rnd]      y
+#   Central [-rnd]    I
+#   Central [+rnd]    U
+#   Back [-rnd]       w
+#   Back [+rnd]       u
+#
+# Height Suffixes:
+#   Close             i
+#   Near-Close        I
+#   Close-Mid         e
+#   Mid               @
+#   Open-Mid          E
+#   Near-Open         a
+#   Open              A
+#
+##
+
+<Multi_key> <backslash> <i> <I> : "ɪ"
+<Multi_key> <backslash> <i> <E> : "ɛ"
+<Multi_key> <backslash> <i> <a> : "æ"
+
+<Multi_key> <backslash> <y> <I> : "ʏ"
+<Multi_key> <backslash> <y> <e> : "ø"
+<Multi_key> <backslash> <y> <E> : "œ"
+<Multi_key> <backslash> <y> <A> : "ɶ"
+
+<Multi_key> <backslash> <I> <i> : "ɨ"
+<Multi_key> <backslash> <I> <I> : "ᵻ"
+<Multi_key> <backslash> <I> <e> : "ɘ"
+<Multi_key> <backslash> <I> <@> : "ə"
+<Multi_key> <backslash> <I> <E> : "ɜ"
+<Multi_key> <backslash> <I> <a> : "ɐ"
+
+<Multi_key> <backslash> <U> <i> : "ʉ"
+<Multi_key> <backslash> <U> <I> : "ᵿ"
+<Multi_key> <backslash> <U> <e> : "ɵ"
+<Multi_key> <backslash> <U> <E> : "ɞ"
+
+<Multi_key> <backslash> <w> <i> : "ɯ"
+<Multi_key> <backslash> <w> <e> : "ɤ"
+<Multi_key> <backslash> <w> <E> : "ʌ"
+<Multi_key> <backslash> <w> <A> : "ɑ"
+
+<Multi_key> <backslash> <u> <E> : "ɔ"
+<Multi_key> <backslash> <u> <A> : "ɒ"
+# }}}
+
+# Modifier letters {{{
+<Multi_key> <underscore> <h>  : "ʰ"
+<Multi_key> <underscore> <j>  : "ʲ"
+<Multi_key> <underscore> <m>  : "ᵐ"
+<Multi_key> <underscore> <n>  : "ⁿ"
+<Multi_key> <underscore> <w>  : "ʷ"
+<Multi_key> <underscore> <'>  : "ʼ"
+
+<Multi_key> <underscore> <backslash> <t> <w>  : "ʴ"
+<Multi_key> <underscore> <backslash> <r> <w>  : "ʵ"
+<Multi_key> <underscore> <backslash> <g> <n>  : "ᵑ"
+<Multi_key> <underscore> <backslash> <g> <z>  : "ˠ"
+<Multi_key> <underscore> <backslash> <q> <n>  : "ᶰ"
+<Multi_key> <underscore> <backslash> <Q> <z>  : "ˤ"
+<Multi_key> <underscore> <backslash> <h> <t>  : "ˀ"
+# }}}
+
+# Combining modifier letters {{{
+<Multi_key> <backspace> <Left>  : U0318 # Left tack below
+<Multi_key> <backspace> <Right> : U0319 # Right tack below
+<Multi_key> <backspace> <Up>    : U031D # Up tack below
+<Multi_key> <backspace> <Down>  : U031E # Down tack below
+
+<Multi_key> <backspace> <a> <p> <i>     : U033A # Inverted bridge below
+<Multi_key> <backspace> <d> <e> <n> <j> : U031A # Bridge below
+<Multi_key> <backspace> <d> <e> <n> <k> : U0346 # Bridge above
+<Multi_key> <backspace> <u> <n> <r> <j> : U0349 # Left angle below
+<Multi_key> <backspace> <u> <n> <r> <k> : U031A # Left angle above
+<Multi_key> <backspace> <s> <y> <l> <j> : U0329 # Vertical line below
+<Multi_key> <backspace> <s> <y> <l> <k> : U030D # Vertical line above
+
+<Multi_key> <backspace> <backspace> <parenleft>   : U032F # Inverted breve below
+<Multi_key> <backspace> <backspace> <less>        : U032D # Circumflex below
+<Multi_key> <backspace> <backspace> <asciitilde>  : U0330 # Tilde below
+# }}}
+
+# Other {{{
+<Multi_key> <backslash> <colon> : "ː"
+# }}}
+# }}}
+
+# Ligatures {{{
+<Multi_key> <period> <a> <e>  : "æ"
+<Multi_key> <period> <i> <j>  : "ĳ"
+<Multi_key> <period> <o> <e>  : "œ"
+<Multi_key> <period> <n> <g>  : "ŋ"
+<Multi_key> <period> <y> <g>  : "ȝ"
+
+<Multi_key> <period> <A> <E>  : "Æ"
+<Multi_key> <period> <I> <J>  : "Ĳ"
+<Multi_key> <period> <O> <E>  : "Œ"
+<Multi_key> <period> <N> <G>  : "Ŋ"
+<Multi_key> <period> <Y> <G>  : "Ȝ"
+# }}}
+
+# Diacritics {{{
+
+################################################################################
+#
+# Diacritic Prefixes:
+#   Acute, single         '   <apostrophe>
+#   Acute, double         "   <quotedbl>
+#   Breve, proper         )   <parenright>
+#   Breve, inverted       (   <parenleft>
+#   Háček                 >   <greater>
+#   Cedilla               ,   <comma>
+#   Circumflex            <   <less>
+#   Dot, above            *   <asterisk>
+#   Dot, below            !   <exclam>
+#   Grave, single         `   <grave>
+#   Grave, double         =   <equal>
+#   Hook, above           ?   <question>
+#   Horn                  ]   <bracketright>
+#   Macron                -   <minus>
+#   Ogonek                [   <bracketleft>
+#   Ring, above           0   <0>
+#   Ring, below           %   <percent>
+#   Stroke                /   <slash>
+#   Tilde, above          ~   <asciitilde>
+#   Tilde, middle         $   <dollar>
+#   Umlaut                :   <colon>
+#
+##
+
+# Acute, single [FINISHED] {{{
+<Multi_key> <backspace> <apostrophe>  : U0301
+
+<Multi_key> <apostrophe> <a>  : "á"
+<Multi_key> <apostrophe> <c>  : "ć"
+<Multi_key> <apostrophe> <e>  : "é"
+<Multi_key> <apostrophe> <g>  : "ǵ"
+<Multi_key> <apostrophe> <i>  : "í"
+<Multi_key> <apostrophe> <k>  : "ḱ"
+<Multi_key> <apostrophe> <l>  : "ĺ"
+<Multi_key> <apostrophe> <m>  : "ḿ"
+<Multi_key> <apostrophe> <n>  : "ń"
+<Multi_key> <apostrophe> <o>  : "ó"
+<Multi_key> <apostrophe> <p>  : "ṕ"
+<Multi_key> <apostrophe> <r>  : "ŕ"
+<Multi_key> <apostrophe> <s>  : "ś"
+<Multi_key> <apostrophe> <u>  : "ú"
+<Multi_key> <apostrophe> <w>  : "ẃ"
+<Multi_key> <apostrophe> <y>  : "ý"
+<Multi_key> <apostrophe> <z>  : "ź"
+<Multi_key> <apostrophe> <period>       <a> <e> : "ǽ"
+<Multi_key> <apostrophe> <parenright>   <a>     : "ắ"
+<Multi_key> <apostrophe> <less>         <a>     : "ấ"
+<Multi_key> <apostrophe> <less>         <e>     : "ế"
+<Multi_key> <apostrophe> <less>         <o>     : "ố"
+<Multi_key> <apostrophe> <asterisk>     <s>     : "ṥ"
+<Multi_key> <apostrophe> <bracketright> <o>     : "ớ"
+<Multi_key> <apostrophe> <bracketright> <u>     : "ứ"
+<Multi_key> <apostrophe> <minus>        <o>     : "ṓ"
+<Multi_key> <apostrophe> <0>            <a>     : "ǻ"
+<Multi_key> <apostrophe> <slash>        <o>     : "ǿ"
+<Multi_key> <apostrophe> <asciitilde>   <o>     : "ṍ"
+<Multi_key> <apostrophe> <asciitilde>   <u>     : "ṹ"
+
+<Multi_key> <apostrophe> <A>  : "Á"
+<Multi_key> <apostrophe> <C>  : "Ć"
+<Multi_key> <apostrophe> <E>  : "É"
+<Multi_key> <apostrophe> <G>  : "Ǵ"
+<Multi_key> <apostrophe> <I>  : "Í"
+<Multi_key> <apostrophe> <K>  : "Ḱ"
+<Multi_key> <apostrophe> <L>  : "Ĺ"
+<Multi_key> <apostrophe> <M>  : "Ḿ"
+<Multi_key> <apostrophe> <N>  : "Ń"
+<Multi_key> <apostrophe> <O>  : "Ó"
+<Multi_key> <apostrophe> <P>  : "Ṕ"
+<Multi_key> <apostrophe> <R>  : "Ŕ"
+<Multi_key> <apostrophe> <S>  : "Ś"
+<Multi_key> <apostrophe> <U>  : "Ú"
+<Multi_key> <apostrophe> <W>  : "Ẃ"
+<Multi_key> <apostrophe> <Y>  : "Ý"
+<Multi_key> <apostrophe> <Z>  : "Ź"
+<Multi_key> <apostrophe> <period>       <A> <E> : "Ǽ"
+<Multi_key> <apostrophe> <parenright>   <A>     : "Ắ"
+<Multi_key> <apostrophe> <less>         <A>     : "Ấ"
+<Multi_key> <apostrophe> <less>         <E>     : "Ế"
+<Multi_key> <apostrophe> <less>         <O>     : "Ố"
+<Multi_key> <apostrophe> <asterisk>     <S>     : "Ṥ"
+<Multi_key> <apostrophe> <bracketright> <O>     : "Ớ"
+<Multi_key> <apostrophe> <bracketright> <U>     : "Ứ"
+<Multi_key> <apostrophe> <minus>        <O>     : "Ṓ"
+<Multi_key> <apostrophe> <0>            <A>     : "Ǻ"
+<Multi_key> <apostrophe> <slash>        <O>     : "Ǿ"
+<Multi_key> <apostrophe> <asciitilde>   <O>     : "Ṍ"
+<Multi_key> <apostrophe> <asciitilde>   <U>     : "Ṹ"
+# }}}
+
+# Acute, double [FINISHED] {{{
+<Multi_key> <backspace> <quotedbl>  : U030B
+
+<Multi_key> <quotedbl> <o> : "ő"
+<Multi_key> <quotedbl> <u> : "ű"
+
+<Multi_key> <quotedbl> <O> : "Ő"
+<Multi_key> <quotedbl> <U> : "Ű"
+# }}}
+
+# Breve, proper [FINISHED] {{{
+<Multi_key> <backspace> <parenright>  : U0306
+
+<Multi_key> <parenright> <a>  : "ă"
+<Multi_key> <parenright> <e>  : "ĕ"
+<Multi_key> <parenright> <g>  : "ğ"
+<Multi_key> <parenright> <h>  : "ḫ"
+<Multi_key> <parenright> <i>  : "ĭ"
+<Multi_key> <parenright> <o>  : "ŏ"
+<Multi_key> <parenright> <u>  : "ŭ"
+<Multi_key> <parenright> <apostrophe> <a> : "ắ"
+<Multi_key> <parenright> <comma> <e>      : "ḝ"
+<Multi_key> <parenright> <exclam> <a>     : "ặ"
+<Multi_key> <parenright> <grave> <a>      : "ằ"
+<Multi_key> <parenright> <question> <a>   : "ẳ"
+<Multi_key> <parenright> <asciitilde> <a> : "ẵ"
+
+<Multi_key> <parenright> <A>  : "Ă"
+<Multi_key> <parenright> <E>  : "Ĕ"
+<Multi_key> <parenright> <G>  : "Ğ"
+<Multi_key> <parenright> <H>  : "Ḫ"
+<Multi_key> <parenright> <I>  : "Ĭ"
+<Multi_key> <parenright> <O>  : "Ŏ"
+<Multi_key> <parenright> <U>  : "Ŭ"
+<Multi_key> <parenright> <apostrophe> <A> : "Ắ"
+<Multi_key> <parenright> <comma>      <E> : "Ḝ"
+<Multi_key> <parenright> <exclam>     <A> : "Ặ"
+<Multi_key> <parenright> <grave>      <A> : "Ằ"
+<Multi_key> <parenright> <question>   <A> : "Ẳ"
+<Multi_key> <parenright> <asciitilde> <A> : "Ẵ"
+# }}}
+
+# Breve, inverted [FINISHED] {{{
+<Multi_key> <backspace> <parenleft> : U0311
+
+<Multi_key> <parenleft> <a> : "ȃ"
+<Multi_key> <parenleft> <e> : "ȇ"
+<Multi_key> <parenleft> <i> : "ȋ"
+<Multi_key> <parenleft> <o> : "ȏ"
+<Multi_key> <parenleft> <r> : "ȓ"
+<Multi_key> <parenleft> <u> : "ȗ"
+
+<Multi_key> <parenleft> <a> : "Ȃ"
+<Multi_key> <parenleft> <e> : "Ȇ"
+<Multi_key> <parenleft> <i> : "Ȋ"
+<Multi_key> <parenleft> <o> : "Ȏ"
+<Multi_key> <parenleft> <r> : "Ȓ"
+<Multi_key> <parenleft> <u> : "Ȗ"
+# }}}
+
+# Caron [FINISHED] {{{
+<Multi_key> <backspace> <greater> : U02C7
+
+<Multi_key> <greater> <a> : "ǎ"
+<Multi_key> <greater> <c> : "č"
+<Multi_key> <greater> <d> : "ď"
+<Multi_key> <greater> <e> : "ě"
+<Multi_key> <greater> <g> : "ǧ"
+<Multi_key> <greater> <h> : "ȟ"
+<Multi_key> <greater> <i> : "ǐ"
+<Multi_key> <greater> <k> : "ǩ"
+<Multi_key> <greater> <l> : "ľ"
+<Multi_key> <greater> <n> : "ň"
+<Multi_key> <greater> <o> : "ǒ"
+<Multi_key> <greater> <r> : "ř"
+<Multi_key> <greater> <s> : "š"
+<Multi_key> <greater> <t> : "ť"
+<Multi_key> <greater> <u> : "ǔ"
+<Multi_key> <greater> <z> : "ž"
+<Multi_key> <greater> <asterisk>  <s> : "ṧ"
+<Multi_key> <greater> <umlaut>    <u> : "ǚ"
+
+<Multi_key> <greater> <A> : "Ǎ"
+<Multi_key> <greater> <C> : "Č"
+<Multi_key> <greater> <D> : "Ď"
+<Multi_key> <greater> <E> : "Ě"
+<Multi_key> <greater> <G> : "Ǧ"
+<Multi_key> <greater> <H> : "Ȟ"
+<Multi_key> <greater> <I> : "Ǐ"
+<Multi_key> <greater> <K> : "Ǩ"
+<Multi_key> <greater> <L> : "Ľ"
+<Multi_key> <greater> <N> : "Ň"
+<Multi_key> <greater> <O> : "Ǒ"
+<Multi_key> <greater> <R> : "Ř"
+<Multi_key> <greater> <S> : "Š"
+<Multi_key> <greater> <T> : "Ť"
+<Multi_key> <greater> <U> : "Ǔ"
+<Multi_key> <greater> <Z> : "Ž"
+<Multi_key> <greater> <asterisk>  <s> : "Ṧ"
+<Multi_key> <greater> <umlaut>    <u> : "Ǚ"
+# }}}
+
+# Cedilla [FINISHED] {{{
+<Multi_key> <comma> <backspace> : U0327
+
+<Multi_key> <comma> <c> : "ç"
+<Multi_key> <comma> <d> : "ḑ"
+<Multi_key> <comma> <e> : "ȩ"
+<Multi_key> <comma> <h> : "ḩ"
+<Multi_key> <comma> <g> : "ģ"
+<Multi_key> <comma> <k> : "ķ"
+<Multi_key> <comma> <l> : "ļ"
+<Multi_key> <comma> <n> : "ņ"
+<Multi_key> <comma> <r> : "ŗ"
+<Multi_key> <comma> <s> : "ş"
+<Multi_key> <comma> <t> : "ţ"
+<Multi_key> <comma> <apostrophe> <c>  : "ḉ"
+<Multi_key> <comma> <parenright> <e>  : "ḝ"
+
+<Multi_key> <comma> <C> : "Ç"
+<Multi_key> <comma> <D> : "Ḑ"
+<Multi_key> <comma> <E> : "Ȩ"
+<Multi_key> <comma> <H> : "Ḩ"
+<Multi_key> <comma> <G> : "Ģ"
+<Multi_key> <comma> <K> : "Ķ"
+<Multi_key> <comma> <L> : "Ļ"
+<Multi_key> <comma> <N> : "Ņ"
+<Multi_key> <comma> <R> : "Ŗ"
+<Multi_key> <comma> <S> : "Ş"
+<Multi_key> <comma> <T> : "Ţ"
+<Multi_key> <comma> <apostrophe> <C>  : "Ḉ"
+<Multi_key> <comma> <parenright> <E>  : "Ḝ"
+# }}}
+
+# Circumflex {{{
+# }}}
+
+# Dot, above [FINISHED] {{{
+<Multi_key> <backspace> <asterisk>  : U0307
+
+<Multi_key> <asterisk> <a>  : "ȧ"
+<Multi_key> <asterisk> <b>  : "ḃ"
+<Multi_key> <asterisk> <c>  : "ċ"
+<Multi_key> <asterisk> <d>  : "ḋ"
+<Multi_key> <asterisk> <e>  : "ė"
+<Multi_key> <asterisk> <f>  : "ḟ"
+<Multi_key> <asterisk> <g>  : "ġ"
+<Multi_key> <asterisk> <h>  : "ḣ"
+<Multi_key> <asterisk> <m>  : "ṁ"
+<Multi_key> <asterisk> <n>  : "ṅ"
+<Multi_key> <asterisk> <o>  : "ȯ"
+<Multi_key> <asterisk> <p>  : "ṗ"
+<Multi_key> <asterisk> <r>  : "ṙ"
+<Multi_key> <asterisk> <s>  : "ṡ"
+<Multi_key> <asterisk> <t>  : "ṫ"
+<Multi_key> <asterisk> <w>  : "ẇ"
+<Multi_key> <asterisk> <x>  : "ẋ"
+<Multi_key> <asterisk> <y>  : "ẏ"
+<Multi_key> <asterisk> <z>  : "ż"
+<Multi_key> <asterisk> <apostrophe> <s> : "ṥ"
+<Multi_key> <asterisk> <exclam>     <s> : "ṩ"
+<Multi_key> <asterisk> <greater>    <s> : "ṧ"
+<Multi_key> <asterisk> <minus>      <a> : "ǡ"
+<Multi_key> <asterisk> <minus>      <o> : "ȱ"
+
+<Multi_key> <asterisk> <A>  : "Ȧ"
+<Multi_key> <asterisk> <B>  : "Ḃ"
+<Multi_key> <asterisk> <C>  : "Ċ"
+<Multi_key> <asterisk> <D>  : "Ḋ"
+<Multi_key> <asterisk> <E>  : "Ė"
+<Multi_key> <asterisk> <F>  : "Ḟ"
+<Multi_key> <asterisk> <G>  : "Ġ"
+<Multi_key> <asterisk> <H>  : "Ḣ"
+<Multi_key> <asterisk> <I>  : "İ"
+<Multi_key> <asterisk> <M>  : "Ṁ"
+<Multi_key> <asterisk> <N>  : "Ṅ"
+<Multi_key> <asterisk> <O>  : "Ȯ"
+<Multi_key> <asterisk> <P>  : "Ṗ"
+<Multi_key> <asterisk> <R>  : "Ṙ"
+<Multi_key> <asterisk> <S>  : "Ṡ"
+<Multi_key> <asterisk> <T>  : "Ṫ"
+<Multi_key> <asterisk> <W>  : "Ẇ"
+<Multi_key> <asterisk> <X>  : "Ẋ"
+<Multi_key> <asterisk> <Y>  : "Ẏ"
+<Multi_key> <asterisk> <Z>  : "Ż"
+<Multi_key> <asterisk> <apostrophe> <S> : "Ṥ"
+<Multi_key> <asterisk> <exclam>     <S> : "Ṩ"
+<Multi_key> <asterisk> <greater>    <S> : "Ṧ"
+<Multi_key> <asterisk> <minus>      <A> : "Ǡ"
+<Multi_key> <asterisk> <minus>      <O> : "Ȱ"
+# }}}
+
+# Dot, below [FINISHED] {{{
+<Multi_key> <backspace> <exclam>  : U0323
+
+<Multi_key> <exclam> <a>  : "ạ"
+<Multi_key> <exclam> <b>  : "ḅ"
+<Multi_key> <exclam> <d>  : "ḍ"
+<Multi_key> <exclam> <e>  : "ẹ"
+<Multi_key> <exclam> <h>  : "ḥ"
+<Multi_key> <exclam> <i>  : "ị"
+<Multi_key> <exclam> <k>  : "ḳ"
+<Multi_key> <exclam> <l>  : "ḷ"
+<Multi_key> <exclam> <m>  : "ṃ"
+<Multi_key> <exclam> <n>  : "ṇ"
+<Multi_key> <exclam> <r>  : "ṛ"
+<Multi_key> <exclam> <s>  : "ṣ"
+<Multi_key> <exclam> <t>  : "ṭ"
+<Multi_key> <exclam> <v>  : "ṿ"
+<Multi_key> <exclam> <w>  : "ẉ"
+<Multi_key> <exclam> <y>  : "ỵ"
+<Multi_key> <exclam> <z>  : "ẓ"
+<Multi_key> <exclam> <parenright>   <a> : "ặ"
+<Multi_key> <exclam> <asciicircum>  <a> : "ậ"
+<Multi_key> <exclam> <asciicircum>  <e> : "ệ"
+<Multi_key> <exclam> <asciicircum>  <o> : "ộ"
+<Multi_key> <exclam> <asterisk>     <s> : "ṩ"
+<Multi_key> <exclam> <bracketright> <o> : "ợ"
+<Multi_key> <exclam> <bracketright> <u> : "ự"
+<Multi_key> <exclam> <minus>        <l> : "ḹ"
+<Multi_key> <exclam> <minus>        <r> : "ṝ"
+
+<Multi_key> <exclam> <A>  : "Ạ"
+<Multi_key> <exclam> <B>  : "Ḅ"
+<Multi_key> <exclam> <D>  : "Ḍ"
+<Multi_key> <exclam> <E>  : "Ẹ"
+<Multi_key> <exclam> <H>  : "Ḥ"
+<Multi_key> <exclam> <I>  : "Ị"
+<Multi_key> <exclam> <K>  : "Ḳ"
+<Multi_key> <exclam> <L>  : "Ḷ"
+<Multi_key> <exclam> <M>  : "Ṃ"
+<Multi_key> <exclam> <N>  : "Ṇ"
+<Multi_key> <exclam> <R>  : "Ṝ"
+<Multi_key> <exclam> <S>  : "Ṣ"
+<Multi_key> <exclam> <T>  : "Ṭ"
+<Multi_key> <exclam> <V>  : "Ṿ"
+<Multi_key> <exclam> <W>  : "Ẉ"
+<Multi_key> <exclam> <Y>  : "ỵ"
+<Multi_key> <exclam> <Z>  : "Ẓ"
+<Multi_key> <exclam> <parenright>   <A> : "Ặ"
+<Multi_key> <exclam> <asciicircum>  <A> : "Ậ"
+<Multi_key> <exclam> <asciicircum>  <E> : "Ệ"
+<Multi_key> <exclam> <asciicircum>  <O> : "Ộ"
+<Multi_key> <exclam> <asterisk>     <S> : "Ṩ"
+<Multi_key> <exclam> <bracketright> <O> : "Ợ"
+<Multi_key> <exclam> <bracketright> <O> : "Ự"
+<Multi_key> <exclam> <minus>        <L> : "Ḹ"
+<Multi_key> <exclam> <minus>        <R> : "Ṝ"
+# }}}
+
+# Grave, single {{{
+<Multi_key> <grave> <backslash> : U02CB
+
+<Multi_key> <grave> <a> : "à"
+<Multi_key> <grave> <e> : "è"
+<Multi_key> <grave> <i> : "ì"
+<Multi_key> <grave> <n> : "ǹ"
+<Multi_key> <grave> <o> : "ò"
+<Multi_key> <grave> <u> : "ù"
+<Multi_key> <grave> <y> : "ỳ"
+<Multi_key> <grave> <colon> <u> : "ǜ"
+
+<Multi_key> <grave> <A> : "À"
+<Multi_key> <grave> <E> : "È"
+<Multi_key> <grave> <I> : "Ì"
+<Multi_key> <grave> <N> : "Ǹ"
+<Multi_key> <grave> <O> : "Ò"
+<Multi_key> <grave> <U> : "Ù"
+<Multi_key> <grave> <Y> : "Ỳ"
+<Multi_key> <grave> <colon> <U> : "Ǜ"
+# }}}
+
+# Grave, double [FINISHED] {{{
+<Multi_key> <backspace> <equal> : U030F
+
+<Multi_key> <equal> <a> : "ȁ"
+<Multi_key> <equal> <e> : "ȅ"
+<Multi_key> <equal> <i> : "ȉ"
+<Multi_key> <equal> <o> : "ȍ"
+<Multi_key> <equal> <r> : "ȑ"
+<Multi_key> <equal> <u> : "ȕ"
+
+<Multi_key> <equal> <A> : "Ȁ"
+<Multi_key> <equal> <E> : "Ȅ"
+<Multi_key> <equal> <I> : "Ȉ"
+<Multi_key> <equal> <O> : "Ȍ"
+<Multi_key> <equal> <R> : "Ȑ"
+<Multi_key> <equal> <U> : "Ȕ"
+# }}}
+
+# Hook, above [FINISHED] {{{
+<Multi_key> <backspace> <question>  : U0309
+
+<Multi_key> <question> <a>  : "ả"
+<Multi_key> <question> <e>  : "ẻ"
+<Multi_key> <question> <i>  : "ỉ"
+<Multi_key> <question> <o>  : "ỏ"
+<Multi_key> <question> <u>  : "ủ"
+<Multi_key> <question> <y>  : "ỷ"
+<Multi_key> <question> <parenright>   <a> : "ẳ"
+<Multi_key> <question> <asciicircum>  <a> : "ẩ"
+<Multi_key> <question> <asciicircum>  <e> : "ể"
+<Multi_key> <question> <asciicircum>  <o> : "ổ"
+<Multi_key> <question> <bracketright> <o> : "ở"
+<Multi_key> <question> <bracketright> <u> : "ử"
+
+<Multi_key> <question> <A>  : "Ả"
+<Multi_key> <question> <E>  : "Ẻ"
+<Multi_key> <question> <I>  : "Ỉ"
+<Multi_key> <question> <O>  : "Ỏ"
+<Multi_key> <question> <U>  : "Ủ"
+<Multi_key> <question> <Y>  : "Ỷ"
+<Multi_key> <question> <parenright>   <A> : "Ẳ"
+<Multi_key> <question> <asciicircum>  <A> : "Ẩ"
+<Multi_key> <question> <asciicircum>  <E> : "Ể"
+<Multi_key> <question> <asciicircum>  <O> : "Ổ"
+<Multi_key> <question> <bracketright> <O> : "Ở"
+<Multi_key> <question> <bracketright> <U> : "Ử"
+# }}}
+
+# Horn [FINISHED] {{{
+<Multi_key> <backspace> <bracketright>  : U031B
+
+<Multi_key> <bracketright> <o>  : "ơ"
+<Multi_key> <bracketright> <u>  : "ư"
+<Multi_key> <bracketright> <apostrophe> <o> : "ớ"
+<Multi_key> <bracketright> <apostrophe> <u> : "ứ"
+<Multi_key> <bracketright> <exclam>     <o> : "ợ"
+<Multi_key> <bracketright> <exclam>     <u> : "ự"
+<Multi_key> <bracketright> <grave>      <o> : "ờ"
+<Multi_key> <bracketright> <grave>      <u> : "ừ"
+<Multi_key> <bracketright> <question>   <o> : "ở"
+<Multi_key> <bracketright> <question>   <u> : "ử"
+<Multi_key> <bracketright> <asciitilde> <o> : "ỡ"
+<Multi_key> <bracketright> <asciitilde> <u> : "ữ"
+
+<Multi_key> <bracketright> <O>  : "Ơ"
+<Multi_key> <bracketright> <U>  : "Ư"
+<Multi_key> <bracketright> <apostrophe> <O> : "Ớ"
+<Multi_key> <bracketright> <apostrophe> <U> : "Ứ"
+<Multi_key> <bracketright> <exclam>     <O> : "Ợ"
+<Multi_key> <bracketright> <exclam>     <U> : "Ự"
+<Multi_key> <bracketright> <grave>      <O> : "Ờ"
+<Multi_key> <bracketright> <grave>      <U> : "Ừ"
+<Multi_key> <bracketright> <question>   <O> : "Ở"
+<Multi_key> <bracketright> <question>   <U> : "Ử"
+<Multi_key> <bracketright> <asciitilde> <O> : "Ỡ"
+<Multi_key> <bracketright> <asciitilde> <U> : "Ữ"
+# }}}
+
+# Macron [FINISHED] {{{
+<Multi_key> <backspace> <minus> : U0304
+
+<Multi_key> <minus> <a> : "ā"
+<Multi_key> <minus> <e> : "ē"
+<Multi_key> <minus> <g> : "ḡ"
+<Multi_key> <minus> <i> : "ī"
+<Multi_key> <minus> <o> : "ō"
+<Multi_key> <minus> <u> : "ū"
+<Multi_key> <minus> <y> : "ȳ"
+<Multi_key> <minus> <period> <a>  <e> : "ǣ"
+<Multi_key> <minus> <apostrophe>  <e> : "ḗ"
+<Multi_key> <minus> <apostrophe>  <o> : "ṓ"
+<Multi_key> <minus> <asterisk>    <a> : "ǡ"
+<Multi_key> <minus> <asterisk>    <o> : "ȱ"
+<Multi_key> <minus> <exclam>      <l> : "ḹ"
+<Multi_key> <minus> <exclam>      <r> : "ṝ"
+<Multi_key> <minus> <grave>       <e> : "ḕ"
+<Multi_key> <minus> <grave>       <o> : "ṑ"
+<Multi_key> <minus> <bracketleft> <o> : "ǭ"
+<Multi_key> <minus> <asciitilde>  <o> : "ȭ"
+<Multi_key> <minus> <colon>       <a> : "ǟ"
+<Multi_key> <minus> <colon>       <o> : "ȫ"
+<Multi_key> <minus> <colon>       <u> : "ū"
+
+<Multi_key> <minus> <A> : "Ā"
+<Multi_key> <minus> <E> : "Ē"
+<Multi_key> <minus> <G> : "ḡ"
+<Multi_key> <minus> <I> : "Ī"
+<Multi_key> <minus> <O> : "ō"
+<Multi_key> <minus> <U> : "Ū"
+<Multi_key> <minus> <Y> : "ȳ"
+<Multi_key> <minus> <period> <A>  <E> : "Ǣ"
+<Multi_key> <minus> <apostrophe>  <E> : "Ḗ"
+<Multi_key> <minus> <apostrophe>  <O> : "Ṓ"
+<Multi_key> <minus> <asterisk>    <A> : "Ǡ"
+<Multi_key> <minus> <asterisk>    <O> : "Ȱ"
+<Multi_key> <minus> <exclam>      <L> : "Ḹ"
+<Multi_key> <minus> <exclam>      <R> : "Ṝ"
+<Multi_key> <minus> <grave>       <E> : "Ḕ"
+<Multi_key> <minus> <grave>       <O> : "Ṑ"
+<Multi_key> <minus> <bracketleft> <O> : "Ǭ"
+<Multi_key> <minus> <asciitilde>  <O> : "Ȭ"
+<Multi_key> <minus> <colon>       <A> : "Ǟ"
+<Multi_key> <minus> <colon>       <O> : "Ȫ"
+<Multi_key> <minus> <colon>       <U> : "Ǖ"
+# }}}
+
+# Ogonek [FINISHED] {{{
+<Multi_key> <backspace> <bracketleft> : U0328
+
+<Multi_key> <bracketleft> <a> : "ą"
+<Multi_key> <bracketleft> <e> : "ę"
+<Multi_key> <bracketleft> <i> : "į"
+<Multi_key> <bracketleft> <o> : "ǫ"
+<Multi_key> <bracketleft> <u> : "ų"
+<Multi_key> <bracketleft> <minus> <o> : "ǭ"
+
+<Multi_key> <bracketleft> <A> : "Ą"
+<Multi_key> <bracketleft> <E> : "Ę"
+<Multi_key> <bracketleft> <I> : "Į"
+<Multi_key> <bracketleft> <O> : "Ǫ"
+<Multi_key> <bracketleft> <U> : "Ų"
+<Multi_key> <bracketleft> <minus> <O> : "Ǭ"
+# }}}
+
+# Ring, above [FINISHED] {{{
+<Multi_key> <backspace> <0> : U030A
+
+<Multi_key> <0> <a> : "å"
+<Multi_key> <0> <u> : "ů"
+<Multi_key> <0> <apostrophe> <a>  : "ǻ"
+
+<Multi_key> <0> <A> : "Å"
+<Multi_key> <0> <U> : "Ů"
+<Multi_key> <0> <apostrophe> <A>  : "Ǻ"
+# }}}
+
+# Ring, below [FINISHED] {{{
+<Multi_key> <backspace> <percent> : U0325
+
+<Multi_key> <percent> <a> : "ḁ"
+
+<Multi_key> <percent> <A> : "Ḁ"
+# }}}
+
+# Stroke {{{
+<Multi_key> <slash> <b> : "ƀ"
+<Multi_key> <slash> <d> : "đ"
+<Multi_key> <slash> <g> : "ǥ"
+<Multi_key> <slash> <h> : "ħ"
+<Multi_key> <slash> <i> : "ɨ"
+<Multi_key> <slash> <j> : "ɉ"
+<Multi_key> <slash> <l> : "ł"
+<Multi_key> <slash> <o> : "ø"
+<Multi_key> <slash> <t> : "ŧ"
+<Multi_key> <slash> <r> : "ɍ"
+<Multi_key> <slash> <y> : "ɏ"
+<Multi_key> <slash> <z> : "ƶ"
+<Multi_key> <slash> <apostrophe> <o>  : "ǿ"
+
+<Multi_key> <slash> <B> : "Ƀ"
+<Multi_key> <slash> <D> : "Đ"
+<Multi_key> <slash> <G> : "Ǥ"
+<Multi_key> <slash> <H> : "Ħ"
+<Multi_key> <slash> <I> : "Ɨ"
+<Multi_key> <slash> <J> : "Ɉ"
+<Multi_key> <slash> <L> : "Ł"
+<Multi_key> <slash> <O> : "Ø"
+<Multi_key> <slash> <T> : "Ŧ"
+<Multi_key> <slash> <R> : "Ɍ"
+<Multi_key> <slash> <Y> : "Ɏ"
+<Multi_key> <slash> <Z> : "Ƶ"
+<Multi_key> <slash> <apostrophe> <O>  : "ǿ"
+# }}}
+
+# Tilde, above {{{
+# }}}
+
+# Tilde, middle [FINISHED] {{{
+<Multi_key> <dollar> <l>  : "ɫ"
+<Multi_key> <dollar> <n>  : "ᵰ"
+<Multi_key> <dollar> <r>  : "ᵲ"
+# }}}
+
+# Umlaut {{{
+<Multi_key> <colon> <backspace> : U0308
+
+<Multi_key> <colon> <a> : "ä"
+<Multi_key> <colon> <e> : "ë"
+<Multi_key> <colon> <i> : "ï"
+<Multi_key> <colon> <o> : "ö"
+<Multi_key> <colon> <u> : "ü"
+<Multi_key> <colon> <y> : "ÿ"
+
+<Multi_key> <colon> <A> : "Ä"
+<Multi_key> <colon> <E> : "Ë"
+<Multi_key> <colon> <I> : "Ï"
+<Multi_key> <colon> <O> : "Ö"
+<Multi_key> <colon> <U> : "Ü"
+<Multi_key> <colon> <Y> : "Ÿ"
+# }}}
+# }}}
+
+# Small capitals {{{
+<Multi_key> <S> <A> : "ᴀ"
+<Multi_key> <S> <B> : "ʙ"
+<Multi_key> <S> <C> : "ᴄ"
+<Multi_key> <S> <D> : "ᴅ"
+<Multi_key> <S> <E> : "ᴇ"
+<Multi_key> <S> <F> : "ꜰ"
+<Multi_key> <S> <G> : "ɢ"
+<Multi_key> <S> <H> : "ʜ"
+<Multi_key> <S> <I> : "ɪ"
+<Multi_key> <S> <J> : "ᴊ"
+<Multi_key> <S> <K> : "ᴋ"
+<Multi_key> <S> <L> : "ʟ"
+<Multi_key> <S> <M> : "ᴍ"
+<Multi_key> <S> <N> : "ɴ"
+<Multi_key> <S> <O> : "ᴏ"
+<Multi_key> <S> <P> : "ᴘ"
+<Multi_key> <S> <R> : "ʀ"
+<Multi_key> <S> <S> : "ꜱ"
+<Multi_key> <S> <T> : "ᴛ"
+<Multi_key> <S> <U> : "ᴜ"
+<Multi_key> <S> <V> : "ᴠ"
+<Multi_key> <S> <W> : "ᴡ"
+<Multi_key> <S> <Y> : "ʏ"
+<Multi_key> <S> <Z> : "ᴢ"
+# }}}
+
+# Stupid {{{
+<Multi_key> <Multi_key> <bracketleft> <1> <bracketright>  : "⚀"
+<Multi_key> <Multi_key> <bracketleft> <2> <bracketright>  : "⚁"
+<Multi_key> <Multi_key> <bracketleft> <3> <bracketright>  : "⚂"
+<Multi_key> <Multi_key> <bracketleft> <4> <bracketright>  : "⚃"
+<Multi_key> <Multi_key> <bracketleft> <5> <bracketright>  : "⚄"
+<Multi_key> <Multi_key> <bracketleft> <6> <bracketright>  : "⚅"
+
+<Multi_key> <Multi_key> <numbersign> <w> <k>  : "♔"
+<Multi_key> <Multi_key> <numbersign> <w> <q>  : "♕"
+<Multi_key> <Multi_key> <numbersign> <w> <r>  : "♖"
+<Multi_key> <Multi_key> <numbersign> <w> <b>  : "♗"
+<Multi_key> <Multi_key> <numbersign> <w> <n>  : "♘"
+<Multi_key> <Multi_key> <numbersign> <w> <p>  : "♙"
+<Multi_key> <Multi_key> <numbersign> <b> <k>  : "♚"
+<Multi_key> <Multi_key> <numbersign> <b> <q>  : "♛"
+<Multi_key> <Multi_key> <numbersign> <b> <r>  : "♜"
+<Multi_key> <Multi_key> <numbersign> <b> <b>  : "♝"
+<Multi_key> <Multi_key> <numbersign> <b> <n>  : "♞"
+<Multi_key> <Multi_key> <numbersign> <b> <p>  : "♟"
+
+<Multi_key> <Multi_key> <g> <o> <d> : "✝"
+<Multi_key> <Multi_key> <o> <r> <t> <h> : "☦"
+<Multi_key> <Multi_key> <c> <c> <c> <p> : "☭"
+<Multi_key> <Multi_key> <less> <n> <a> <z> <i> : "卍"
+<Multi_key> <Multi_key> <greater> <n> <a> <z> <i> : "卐"
+# }}}

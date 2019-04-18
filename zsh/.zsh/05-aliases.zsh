@@ -22,10 +22,18 @@ alias envim="nvim ~/dotfiles/nvim/.config/nvim/init.vim"
 
 alias szsh="source ~/.zshrc"
 
+# Personal projects
 alias wyrd="cd ~/projects/wyrd"
+alias pkl="cd ~/projects/proto-kasso-lengic"
+
+# Rails
+alias rlc="rails console"
+alias rls="rails server"
+
+# TTech
 alias psia="cd ~/work/psiware-api"
 alias slpr="cd ~/work/slp/rails"
 alias slpp="cd ~/work/slp/reporting"
 
-alias rlc="rails console"
-alias rls="rails server"
+export SLP_SOFFICE="/usr/bin/soffice"
+export SLP_CONVERT="/usr/bin/convert"

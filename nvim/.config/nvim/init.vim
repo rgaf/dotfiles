@@ -48,7 +48,7 @@ colorscheme jellybeans
 
 set nohlsearch " No highlighting when searching
 set number " Show line numbers
-set nowrap " No line wrapping
+set wrap " Line wrapping
 set cursorline " Highlight cursor
 set ruler " Show line and column of cursor position
 
@@ -136,6 +136,11 @@ nnoremap <C-l> <C-w>l
 nnoremap ; :
 nnoremap Q @Q
 
+nnoremap 0 g0
+nnoremap j gj
+nnoremap k gk
+nnoremap $ g$
+
 nnoremap <Leader>r :call NumberToggle()<CR>
 nnoremap <Leader>cc :call Comment()<CR>
 nnoremap <Leader>cu :call Uncomment()<CR>
@@ -156,6 +161,36 @@ command Chmodx :!chmod a+x %
 
 " Get color under cursor
 command Color :echo synIDattr(synIDtrans(synID(line("."), col("."), 1)), "fg")
+
+function! DoPrettyXML()
+  " save the filetype so we can restore it later
+  let l:origft = &ft
+  set ft=
+  " delete the xml header if it exists. This will
+  " permit us to surround the document with fake tags
+  " without creating invalid xml.
+  1s/<?xml .*?>//e
+  " insert fake tags around the entire document.
+  " This will permit us to pretty-format excerpts of
+  " XML that may contain multiple top-level elements.
+  0put ='<PrettyXML>'
+  $put ='</PrettyXML>'
+  silent %!xmllint --format -
+  " xmllint will insert an <?xml?> header. it's easy enough to delete
+  " if you don't want it.
+  " delete the fake tags
+  2d
+  $d
+  " restore the 'normal' indentation, which is one extra level
+  " too deep due to the extra tags we wrapped around the document.
+  silent %<
+  " back to home
+  1
+  " restore the filetype
+  exe "set ft=" . l:origft
+endfunction
+
+command! PrettyXML call DoPrettyXML()
 " }}}
 
 " Plugin Settings {{{
