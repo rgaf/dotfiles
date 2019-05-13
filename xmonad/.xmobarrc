@@ -1,7 +1,9 @@
-Config { font = "xft:Fira Mono:size=14,style=medium:antialias=true"
+Config { font = "xft:Fira Mono:size=7,style=medium:antialias=true"
        , bgColor = "#000000"
        , fgColor = "#bbbbbb"
-       , position = Static { xpos = 0, ypos = 0, width = 2360, height = 25 }
+       , textOffset = 22
+       -- Width here is 2560 - (num stalonetray icons x icon width)
+       , position = Static { xpos = 0, ypos = 0, width = 2350, height = 30 }
        --, position = TopW L 100
        , commands =
            [ Run Cpu ["-t", "<total>%", "-L", "5", "-H", "40", "--normal", "green", "--high", "red"] 15
@@ -13,5 +15,5 @@ Config { font = "xft:Fira Mono:size=14,style=medium:antialias=true"
        , sepChar = "%"
        , alignSep = "}{"
        , lowerOnStart = False
-       , template = "%StdinReader% }{ BAT: %battery% | CPU: %cpu% | MEM: %memory% | DATE: %date% "
+       , template = " %StdinReader% }{ BAT: %battery% | CPU: %cpu% | MEM: %memory% | DATE: %date% "
        }

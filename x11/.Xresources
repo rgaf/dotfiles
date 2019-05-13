@@ -1,3 +1,5 @@
+Xft.dpi: 192
+
 ! URxvt {{{
 URxvt.font: xft:Fira Mono:size=14,style=medium:antialias=true
 URxvt.boldFont: xft:Fira Mono:size=14,style=bold:antialias=true
